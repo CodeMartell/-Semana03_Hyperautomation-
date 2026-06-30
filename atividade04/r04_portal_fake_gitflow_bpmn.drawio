@@ -1,0 +1,347 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net">
+  <diagram name="portal_fake_gitflow_bpmn" id="r04_diagram">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="pool" parent="1" style="swimlane;html=1;startSize=40;fontStyle=1;collapsible=0;horizontal=0;swimlaneLine=1;swimlaneFillColor=#ffffff;strokeColor=#000000;strokeWidth=2;whiteSpace=wrap;" vertex="1" value="&lt;b&gt;Portal Fake - Processo de Desenvolvimento Colaborativo com GitFlow&lt;/b&gt;">
+          <mxGeometry x="20" y="40" width="2400" height="880" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_leader" parent="pool" style="swimlane;startSize=40;horizontal=0;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=8;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" value="LÍDER TÉCNICO">
+          <mxGeometry x="40" y="0" width="2360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_cadastro" parent="pool" style="swimlane;startSize=40;horizontal=0;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=8;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" value="DESENVOLVEDOR DE CADASTRO">
+          <mxGeometry x="40" y="220" width="2360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_consulta" parent="pool" style="swimlane;startSize=40;horizontal=0;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=8;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" value="DESENVOLVEDOR DE CONSULTA">
+          <mxGeometry x="40" y="440" width="2360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_exportacao" parent="pool" style="swimlane;startSize=40;horizontal=0;html=1;whiteSpace=wrap;collapsible=0;fontFamily=Times New Roman;fontSize=8;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" value="DESENVOLVEDOR DE EXPORTAÇÃO">
+          <mxGeometry x="40" y="660" width="2360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="start_event" parent="lane_leader" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="&lt;b&gt;Processo&lt;br&gt;Iniciado&lt;/b&gt;">
+          <mxGeometry x="50" y="85" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_create_repo" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Criar repositório no GitHub">
+          <mxGeometry x="150" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_create_develop" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Criar a branch develop">
+          <mxGeometry x="290" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_add_members" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Adicionar os integrantes da equipe">
+          <mxGeometry x="430" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_share_link" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Compartilhar o link do repositório">
+          <mxGeometry x="570" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="gateway_abertura" parent="lane_leader" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=parallel;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="">
+          <mxGeometry x="710" y="85" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_abertura" parent="lane_leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=8;;fontStyle=1;" vertex="1" value="Abertura das atividades&lt;br&gt;em paralelo">
+          <mxGeometry x="690" y="30" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="gateway_fechamento" parent="lane_leader" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=parallel;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="">
+          <mxGeometry x="1580" y="125" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_fechamento" parent="lane_leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=8;;fontStyle=1;" vertex="1" value="Fechamento das atividades&lt;br&gt;em paralelo">
+          <mxGeometry x="1560" y="75" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_request_fixes" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Solicitar correções nas branches feature">
+          <mxGeometry x="1430" y="25" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_review_prs" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Revisar os Pull Requests">
+          <mxGeometry x="1670" y="25" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_validate_modules" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Validar os módulos desenvolvidos">
+          <mxGeometry x="1810" y="25" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_test_integration" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Testar a integração entre os módulos">
+          <mxGeometry x="1950" y="25" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_merge_develop" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar o Merge para a branch develop">
+          <mxGeometry x="2090" y="25" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="gateway_approved" parent="lane_leader" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="&lt;b&gt;Sistema&lt;br&gt;aprovado?&lt;/b&gt;">
+          <mxGeometry x="2115" y="125" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_merge_main" parent="lane_leader" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar o Merge para a branch main">
+          <mxGeometry x="1950" y="125" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="end_event" parent="lane_leader" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="&lt;b&gt;Sistema&lt;br&gt;Entregue&lt;/b&gt;">
+          <mxGeometry x="1840" y="130" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="text_sim" parent="lane_leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=8;;fontStyle=1;" vertex="1" value="Sim">
+          <mxGeometry x="2075" y="130" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="text_nao" parent="lane_leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=8;;fontStyle=1;" vertex="1" value="Não">
+          <mxGeometry x="2175" y="130" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_clone" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Clonar o repositório">
+          <mxGeometry x="790" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_branch" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Criar a branch feature/cadastro">
+          <mxGeometry x="920" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_dev" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Desenvolver a automação de cadastro">
+          <mxGeometry x="1050" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_commit" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Commit">
+          <mxGeometry x="1180" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_push" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Push">
+          <mxGeometry x="1310" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_cadastro_pr" parent="lane_cadastro" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Abrir Pull Request">
+          <mxGeometry x="1440" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_clone" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Clonar o repositório">
+          <mxGeometry x="790" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_branch" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Criar a branch feature/consulta">
+          <mxGeometry x="920" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_dev" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Desenvolver a automação de consulta">
+          <mxGeometry x="1050" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_commit" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Commit">
+          <mxGeometry x="1180" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_push" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Push">
+          <mxGeometry x="1310" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_consulta_pr" parent="lane_consulta" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Abrir Pull Request">
+          <mxGeometry x="1440" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_clone" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Clonar o repositório">
+          <mxGeometry x="790" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_branch" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Criar a branch feature/exportacao">
+          <mxGeometry x="920" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_dev" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Desenvolver a automação de exportação">
+          <mxGeometry x="1050" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_commit" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Commit">
+          <mxGeometry x="1180" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_push" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Realizar Push">
+          <mxGeometry x="1310" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="task_lane_exportacao_pr" parent="lane_exportacao" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" vertex="1" value="Abrir Pull Request">
+          <mxGeometry x="1440" y="85" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_start_to_create_repo" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="start_event" target="task_create_repo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_create_repo_to_develop" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_create_repo" target="task_create_develop">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_create_develop_to_add" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_create_develop" target="task_add_members">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_add_to_share" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_add_members" target="task_share_link">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_share_to_abertura" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_share_link" target="gateway_abertura">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_abertura_to_cadastro_clone" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_abertura" target="task_lane_cadastro_clone">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_abertura_to_consulta_clone" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_abertura" target="task_lane_consulta_clone">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_abertura_to_exportacao_clone" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_abertura" target="task_lane_exportacao_clone">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_clone_to_branch" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_clone" target="task_lane_cadastro_branch">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_branch_to_dev" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_branch" target="task_lane_cadastro_dev">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_dev_to_commit" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_dev" target="task_lane_cadastro_commit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_commit_to_push" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_commit" target="task_lane_cadastro_push">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_push_to_pr" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_push" target="task_lane_cadastro_pr">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_clone_to_branch" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_clone" target="task_lane_consulta_branch">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_branch_to_dev" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_branch" target="task_lane_consulta_dev">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_dev_to_commit" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_dev" target="task_lane_consulta_commit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_commit_to_push" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_commit" target="task_lane_consulta_push">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_push_to_pr" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_push" target="task_lane_consulta_pr">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_clone_to_branch" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_clone" target="task_lane_exportacao_branch">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_branch_to_dev" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_branch" target="task_lane_exportacao_dev">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_dev_to_commit" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_dev" target="task_lane_exportacao_commit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_commit_to_push" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_commit" target="task_lane_exportacao_push">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_push_to_pr" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_push" target="task_lane_exportacao_pr">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_cad_pr_to_fechamento" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_cadastro_pr" target="gateway_fechamento">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_con_pr_to_fechamento" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_consulta_pr" target="gateway_fechamento">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_exp_pr_to_fechamento" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_lane_exportacao_pr" target="gateway_fechamento">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_fechamento_to_review" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_fechamento" target="task_review_prs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_review_to_validate" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_review_prs" target="task_validate_modules">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_validate_to_test" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_validate_modules" target="task_test_integration">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_test_to_merge_dev" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_test_integration" target="task_merge_develop">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_merge_dev_to_approved" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_merge_develop" target="gateway_approved">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_approved_to_merge_main" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_approved" target="task_merge_main">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_merge_main_to_end" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_merge_main" target="end_event">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_approved_to_fixes" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="gateway_approved" target="task_request_fixes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_fixes_to_abertura" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;fontSize=8;fontFamily=Times New Roman;strokeColor=#000000;" edge="1" source="task_request_fixes" target="gateway_abertura">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="sourcePoint"/>
+            <mxPoint as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
